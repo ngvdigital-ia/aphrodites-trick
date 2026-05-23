@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0604">
+  <title>Aphrodite's Trick</title>
+  <meta name="description" content="The ancient Egyptian secret that makes him completely obsessed with you — again.">
+
+  <!-- Meta Pixel (TODO: replace META_PIXEL_ID) -->
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','META_PIXEL_ID');fbq('track','PageView');</script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=META_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+
+  <!-- VTurb Preload (TODO: replace vid-PLACEHOLDER after A/B test) -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/vid-PLACEHOLDER/player.js" as="script" fetchpriority="high">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+
+  <!-- DNS-prefetch -->
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+  <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+  <link rel="dns-prefetch" href="https://connect.facebook.net">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=DM+Sans:wght@400;500;700&display=swap"></noscript>
+
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#0a0604;
+      --gold:#c9a24b;
+      --gold-light:#e6c878;
+      --red:#d23b2e;
+      --red-strong:#e94b3c;
+      --text:#efe7da;
+      --muted:#b3a895;
+      --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+      --sans:'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+    /* Glow bordô atrás do topo */
+    .stage{position:relative;min-height:100vh;display:flex;flex-direction:column;background:
+      radial-gradient(120% 70% at 50% 0%, rgba(120,30,20,0.45) 0%, rgba(40,12,8,0.30) 32%, rgba(10,6,4,0) 62%),
+      linear-gradient(180deg,#140a06 0%, #0a0604 55%, #070402 100%);
+    }
+
+    /* Barra de aviso topo */
+    .takedown{background:linear-gradient(90deg,#5e1410,#7c1a14,#5e1410);border-bottom:1px solid rgba(210,59,46,0.35);padding:9px 16px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.06em;color:#f3d9d4;text-transform:uppercase}
+    .takedown .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red-strong);margin-right:7px;vertical-align:middle;animation:pulse 1.5s infinite}
+    .takedown .date{color:var(--gold-light)}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+    /* Conteúdo */
+    .content{flex:1;width:100%;max-width:880px;margin:0 auto;padding:46px 22px 40px;text-align:center}
+    .eyebrow{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:22px;opacity:.92}
+    .eyebrow::before,.eyebrow::after{content:'—';margin:0 12px;color:var(--gold);opacity:.6}
+
+    .headline{font-family:var(--serif);font-weight:800;font-size:46px;line-height:1.12;letter-spacing:-.01em;color:#fbf6ee;margin:0 auto 22px;max-width:14ch}
+    .headline .obsessed{color:var(--gold-light);font-style:italic;font-weight:700}
+    .headline .again{color:var(--red-strong)}
+
+    .subhead{font-size:16.5px;line-height:1.7;color:var(--muted);max-width:60ch;margin:0 auto 26px}
+    .subhead strong{color:#fbf6ee;font-weight:700}
+
+    .watching{display:inline-flex;align-items:center;gap:8px;background:rgba(210,59,46,0.12);border:1px solid rgba(210,59,46,0.35);border-radius:30px;padding:7px 16px;font-size:13px;color:#f0c9c3;margin-bottom:30px}
+    .watching .live{width:9px;height:9px;border-radius:50%;background:var(--red-strong);box-shadow:0 0 0 0 rgba(233,75,60,.6);animation:livePulse 1.6s infinite}
+    .watching b{color:#fff;font-weight:700}
+    @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(233,75,60,.6)}70%{box-shadow:0 0 0 8px rgba(233,75,60,0)}100%{box-shadow:0 0 0 0 rgba(233,75,60,0)}}
+
+    .video-wrap{max-width:680px;margin:0 auto;border-radius:6px;overflow:hidden;border:1px solid rgba(201,162,75,0.22);box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 40px rgba(120,30,20,.18)}
+    vturb-smartplayer{display:block;width:100%}
+    .video-fallback{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,#2a0f0a,#0a0604);color:#6b5c48;font-size:13px;letter-spacing:.05em}
+
+    .scroll-cue{margin:34px auto 0;color:var(--gold);font-size:20px;opacity:.55;animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+    /* Footer */
+    .site-footer{background:#0e0a14;border-top:1px solid rgba(255,255,255,0.05);padding:40px 22px 46px;text-align:center}
+    .site-footer .brand{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--gold-light);margin-bottom:18px}
+    .site-footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-size:13px}
+    .site-footer .links a{color:#9b9088;text-decoration:none}
+    .site-footer .links a:hover{color:#cfc4b6;text-decoration:underline}
+    .site-footer .copy{font-size:12px;color:#6a6258;margin-bottom:16px}
+    .site-footer .disclaimer{max-width:680px;margin:0 auto;font-size:11px;line-height:1.7;color:#534c44}
+
+    @media(max-width:640px){
+      .content{padding:34px 18px 30px}
+      .headline{font-size:32px;max-width:none}
+      .subhead{font-size:15px}
+      .eyebrow{letter-spacing:.3em}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stage">
+    <!-- Barra de aviso -->
+    <div class="takedown">
+      <span class="dot"></span>This presentation will be removed on <span class="date" id="takedown-date">--/--/----</span> — watch before it's gone
+    </div>
+
+    <main class="content">
+      <p class="eyebrow">Revealed for the first time</p>
+
+      <h1 class="headline">
+        The Ancient Egyptian Secret That Makes Him <span class="obsessed">Completely Obsessed</span> With You — <span class="again">Again</span>
+      </h1>
+
+      <p class="subhead">
+        A forbidden ritual buried with Cleopatra for 2,000 years — now decoded by science — that triggers a chemical explosion in his brain making you his <strong>only obsession, day and night.</strong>
+      </p>
+
+      <div class="watching">
+        <span class="live"></span>
+        <span><b id="watch-count">649</b> women are watching this right now</span>
+      </div>
+
+      <!-- Vídeo -->
+      <div class="video-wrap">
+        <!-- TODO: replace vid-PLACEHOLDER after A/B test is finalized -->
+        <vturb-smartplayer id="ab-vid-PLACEHOLDER" style="display:block;width:100%;"></vturb-smartplayer>
+        <script type="text/javascript">var s=document.createElement("script");s.src="https://scripts.converteai.net/00c3b583-8874-4e64-a32e-65f6dd9ba521/ab-test/vid-PLACEHOLDER/player.js";s.async=!0;document.head.appendChild(s);</script>
+        <noscript><div class="video-fallback">Enable JavaScript to watch the presentation</div></noscript>
+      </div>
+
+      <div class="scroll-cue">✦</div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="brand">Secrets</div>
+    <div class="links">
+      <a href="/terms-of-use/">Terms of Use</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+    </div>
+    <div class="copy">Copyright 2026 — Secrets ® — All Rights Reserved</div>
+    <p class="disclaimer">
+      The product offered on this page is intended exclusively for educational and informational purposes. Individual results will vary. Testimonials do not constitute experiences and do not represent typical or guaranteed results. This product is not intended to diagnose, treat, or replace professional orientation or medical advice.
+    </p>
+  </footer>
+
+  <script>
+    /* Data de takedown (hoje + 2 dias) */
+    (function(){
+      var d=new Date(); d.setDate(d.getDate()+2);
+      var mm=String(d.getMonth()+1).padStart(2,'0'), dd=String(d.getDate()).padStart(2,'0');
+      var el=document.getElementById('takedown-date');
+      if(el) el.textContent=mm+'/'+dd+'/'+d.getFullYear();
+    })();
+
+    /* Contador de mulheres assistindo — varia levemente em torno do valor base */
+    (function(){
+      var el=document.getElementById('watch-count');
+      if(!el) return;
+      var rand=function(a,b){return Math.floor(Math.random()*(b-a+1))+a;};
+      var count=rand(612,689);
+      el.textContent=count;
+      setInterval(function(){
+        count += rand(-4,7);
+        if(count<590) count=590; if(count>720) count=720;
+        el.textContent=count;
+      }, rand(3000,5000));
+    })();
+  </script>
+
+  <!-- UTMify Pixel (TODO: replace UTMIFY_ID) -->
+  <script>
+    window.pixelId = "UTMIFY_ID";
+    var _up = document.createElement("script");
+    _up.setAttribute("async","");
+    _up.setAttribute("defer","");
+    _up.setAttribute("src","https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(_up);
+  </script>
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+</body>
+</html>
