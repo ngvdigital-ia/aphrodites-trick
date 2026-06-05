@@ -1,33 +1,56 @@
 /* ============================================================
    Aphrodite's Trick — Upsell cascade shared styles
-   Dark Egyptian aesthetic, aligned with /vsl (Secrets brand)
+   Structure shared; color theme set per page via body.t1 … body.t6
    ============================================================ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
+  /* themeable palette (defaults = gold/egyptian) */
   --bg:#0a0604;
-  --bg-soft:#120b07;
   --card:#160d08;
-  --gold:#c9a24b;
-  --gold-light:#e6c878;
+  --gold:#c9a24b;          /* primary accent */
+  --gold-light:#e6c878;    /* accent light (buttons, headings) */
   --red:#d23b2e;
   --red-strong:#e94b3c;
-  --green:#4fae6a;
   --text:#efe7da;
   --muted:#b3a895;
   --faint:#8a7f6f;
+  --glow:rgba(120,30,20,0.40);
+  --grad-top:#140a06;
+  --grad-mid:#0a0604;
+  --grad-bot:#070402;
+  --alert-a:#5e1410;
+  --alert-b:#7c1a14;
+  --footer-bg:#0e0a14;
+  --cta-text:#1a0f06;      /* text color on the accent button */
+  /* fonts */
   --serif:'Playfair Display',Georgia,'Times New Roman',serif;
   --sans:'DM Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 }
+
+/* ---------- Per-page color themes ---------- */
+/* t1 — The Aphrodite Circle — royal violet + gold */
+body.t1{--bg:#100815;--card:#1b1024;--gold:#caa24e;--gold-light:#ecc97f;--glow:rgba(146,52,168,0.30);--grad-top:#20102b;--grad-mid:#100815;--grad-bot:#0a0510;--alert-a:#3f1247;--alert-b:#6e1f74;--footer-bg:#0d0712}
+/* t2 — The Sacred Touch Protocol — terracotta / bronze */
+body.t2{--bg:#140a06;--card:#1e0f08;--gold:#d08a4e;--gold-light:#f0b277;--glow:rgba(190,90,40,0.30);--grad-top:#241108;--grad-mid:#140a06;--grad-bot:#0c0604;--alert-a:#5a2410;--alert-b:#7e3415;--footer-bg:#100904}
+/* t3 — The Oracle's Mouth — emerald / teal + gold */
+body.t3{--bg:#04110e;--card:#08201a;--gold:#bfa256;--gold-light:#e3cf8a;--glow:rgba(30,150,120,0.28);--grad-top:#072018;--grad-mid:#04110e;--grad-bot:#020b09;--alert-a:#0c3d30;--alert-b:#135a44;--footer-bg:#04100d}
+/* t4 — The Emotional Conquest Code — midnight navy + amber */
+body.t4{--bg:#060912;--card:#0c1322;--gold:#d9a23f;--gold-light:#f3c873;--glow:rgba(40,80,180,0.28);--grad-top:#0a1226;--grad-mid:#060912;--grad-bot:#04060e;--alert-a:#13245e;--alert-b:#1c357e;--footer-bg:#05080f}
+/* t5 — The Commitment Lock — wine / burgundy + rose gold */
+body.t5{--bg:#140509;--card:#20080e;--gold:#cf8f7e;--gold-light:#edb6a4;--glow:rgba(180,40,70,0.30);--grad-top:#240810;--grad-mid:#140509;--grad-bot:#0c0306;--alert-a:#5e1224;--alert-b:#841a30;--footer-bg:#100408}
+/* t6 — Text His Brain — charcoal slate + electric magenta */
+body.t6{--bg:#0b0c10;--card:#15171d;--gold:#e0479b;--gold-light:#ff7ec0;--glow:rgba(224,71,155,0.26);--grad-top:#161019;--grad-mid:#0b0c10;--grad-bot:#070709;--alert-a:#5a1247;--alert-b:#7e1a64;--footer-bg:#0a0a0d;--cta-text:#160510}
+
 html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.72}
 
 /* Background glow stage */
 .stage{position:relative;min-height:100vh;background:
-  radial-gradient(120% 60% at 50% 0%, rgba(120,30,20,0.40) 0%, rgba(40,12,8,0.28) 30%, rgba(10,6,4,0) 60%),
-  linear-gradient(180deg,#140a06 0%, #0a0604 55%, #070402 100%);
+  radial-gradient(120% 65% at 50% 0%, var(--glow) 0%, transparent 60%),
+  linear-gradient(180deg,var(--grad-top) 0%, var(--grad-mid) 55%, var(--grad-bot) 100%);
 }
 
 /* Top attention bar */
-.alertbar{background:linear-gradient(90deg,#5e1410,#7c1a14,#5e1410);border-bottom:1px solid rgba(210,59,46,0.35);padding:11px 18px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.02em;color:#f6e3de;line-height:1.5}
+.alertbar{background:linear-gradient(90deg,var(--alert-a),var(--alert-b),var(--alert-a));border-bottom:1px solid rgba(255,255,255,0.10);padding:11px 18px;text-align:center;font-size:13px;font-weight:700;letter-spacing:.02em;color:#f6e3de;line-height:1.5}
 .alertbar .warn{color:var(--gold-light);margin-right:4px}
 .alertbar b{color:#fff}
 
@@ -53,7 +76,7 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .block-title{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.25;color:var(--gold-light);margin:34px 0 14px}
 
 /* Testimonial */
-.testimonial{background:var(--card);border:1px solid rgba(201,162,75,0.20);border-left:3px solid var(--gold);border-radius:6px;padding:24px 26px;margin:26px 0;font-size:16px;line-height:1.7;color:var(--text);font-style:italic}
+.testimonial{background:var(--card);border:1px solid rgba(255,255,255,0.10);border-left:3px solid var(--gold);border-radius:6px;padding:24px 26px;margin:26px 0;font-size:16px;line-height:1.7;color:var(--text);font-style:italic}
 .testimonial .lead{font-style:normal;color:var(--muted);font-size:14px;margin-bottom:10px}
 
 /* "Don't be X" warning callout */
@@ -63,7 +86,7 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .warnbox .dontbe{font-family:var(--serif);font-style:italic;font-weight:700;font-size:20px;color:var(--red-strong);text-align:center;margin-top:6px}
 
 /* Offer reveal */
-.reveal{position:relative;background:linear-gradient(180deg,#1a100a,#140c07);border:1px solid rgba(201,162,75,0.30);border-radius:10px;padding:34px 30px;margin:34px 0;box-shadow:0 18px 50px rgba(0,0,0,.5),0 0 36px rgba(120,30,20,.12)}
+.reveal{position:relative;background:linear-gradient(180deg,var(--card),var(--grad-bot));border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:34px 30px;margin:34px 0;box-shadow:0 18px 50px rgba(0,0,0,.5),0 0 36px var(--glow)}
 .reveal .kicker{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600;text-align:center;margin-bottom:8px}
 .reveal h2{font-family:var(--serif);font-weight:800;font-size:28px;line-height:1.2;color:#fbf6ee;text-align:center;margin-bottom:16px}
 .reveal h2 em{color:var(--gold-light);font-style:italic}
@@ -83,8 +106,8 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .scarcity{text-align:center;font-size:14.5px;color:#f0c9c3;background:rgba(210,59,46,0.10);border:1px solid rgba(210,59,46,0.28);border-radius:6px;padding:14px 18px;margin:22px 0}
 
 /* CTA */
-.cta{display:block;width:100%;max-width:560px;margin:8px auto 0;background:linear-gradient(180deg,var(--gold-light),var(--gold));color:#1a0f06;font-family:var(--sans);font-size:17.5px;font-weight:700;letter-spacing:.01em;text-align:center;text-decoration:none;padding:19px 22px;border:none;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(201,162,75,.28)}
-.cta:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(201,162,75,.4)}
+.cta{display:block;width:100%;max-width:560px;margin:8px auto 0;background:linear-gradient(180deg,var(--gold-light),var(--gold));color:var(--cta-text);font-family:var(--sans);font-size:17.5px;font-weight:700;letter-spacing:.01em;text-align:center;text-decoration:none;padding:19px 22px;border:none;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px var(--glow)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 16px 40px var(--glow)}
 .cta .sub{display:block;font-size:12.5px;font-weight:500;opacity:.78;margin-top:3px;text-transform:none;letter-spacing:0}
 
 .guarantee{max-width:560px;margin:16px auto 0;text-align:center;font-size:13.5px;line-height:1.65;color:var(--muted)}
@@ -93,7 +116,7 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .decline:hover{color:var(--muted);text-decoration:underline}
 
 /* Footer */
-.site-footer{background:#0e0a14;border-top:1px solid rgba(255,255,255,0.05);padding:38px 22px 44px;text-align:center}
+.site-footer{background:var(--footer-bg);border-top:1px solid rgba(255,255,255,0.05);padding:38px 22px 44px;text-align:center}
 .site-footer .brand{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold-light);margin-bottom:16px}
 .site-footer .links{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-bottom:14px;font-size:13px}
 .site-footer .links a{color:#9b9088;text-decoration:none}
