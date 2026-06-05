@@ -60,8 +60,8 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 
 /* Hero */
 .eyebrow{font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:18px;text-align:center}
-.headline{font-family:var(--serif);font-weight:800;font-size:38px;line-height:1.14;letter-spacing:-.01em;color:#fbf6ee;margin:0 0 18px;text-align:center}
-.headline em{color:var(--gold-light);font-style:italic}
+.headline{font-family:var(--serif);font-weight:800;font-size:38px;line-height:1.14;letter-spacing:-.01em;color:#ffffff;margin:0 0 18px;text-align:center}
+.headline em{color:#ffffff;font-style:italic}
 .headline .accent{color:var(--red-strong)}
 .subhead{font-size:18px;line-height:1.6;color:var(--gold-light);max-width:58ch;margin:0 auto 6px;text-align:center;font-family:var(--serif);font-style:italic}
 .subhead strong{color:#fbf6ee;font-style:normal;font-weight:700}
@@ -94,7 +94,7 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .reveal p:last-child{margin-bottom:0}
 .reveal .mechanism{display:block;text-align:center;font-family:var(--serif);font-style:italic;color:var(--gold-light);font-size:18px;margin:4px 0 18px}
 
-/* Value / price anchor */
+/* Value / price anchor (legacy) */
 .valuebox{text-align:center;margin:30px 0 6px}
 .valuebox .anchor{font-size:15px;color:var(--muted)}
 .valuebox .anchor s{color:var(--faint)}
@@ -102,12 +102,22 @@ html,body{background:var(--bg);color:var(--text);font-family:var(--sans);min-hei
 .valuebox .price .cur{font-size:30px;vertical-align:super;margin-right:2px}
 .valuebox .terms{font-size:13.5px;color:var(--muted)}
 
+/* Price highlight box — keeps the price in evidence on every page */
+.pricebox{max-width:480px;margin:32px auto 8px;text-align:center;background:linear-gradient(180deg,var(--card),var(--grad-bot));border:1px solid var(--gold);border-radius:14px;padding:28px 26px;box-shadow:0 0 34px var(--glow)}
+.pricebox .plabel{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:10px}
+.pricebox .was{font-size:15px;color:var(--faint);margin-bottom:4px}
+.pricebox .was s{color:var(--faint)}
+.pricebox .price{display:block;font-family:var(--serif);font-weight:800;font-size:64px;line-height:1;color:var(--gold-light);letter-spacing:-.02em;text-shadow:0 0 26px var(--glow)}
+.pricebox .price .cur{font-size:34px;vertical-align:super;margin-right:3px}
+.pricebox .pnote{font-size:13.5px;color:var(--muted);margin-top:10px}
+@media(max-width:640px){.pricebox{padding:24px 18px}.pricebox .price{font-size:54px}}
+
 /* Scarcity */
 .scarcity{text-align:center;font-size:14.5px;color:#f0c9c3;background:rgba(210,59,46,0.10);border:1px solid rgba(210,59,46,0.28);border-radius:6px;padding:14px 18px;margin:22px 0}
 
-/* CTA */
-.cta{display:block;width:100%;max-width:560px;margin:8px auto 0;background:linear-gradient(180deg,var(--gold-light),var(--gold));color:var(--cta-text);font-family:var(--sans);font-size:17.5px;font-weight:700;letter-spacing:.01em;text-align:center;text-decoration:none;padding:19px 22px;border:none;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px var(--glow)}
-.cta:hover{transform:translateY(-2px);box-shadow:0 16px 40px var(--glow)}
+/* CTA — always green across all themes */
+.cta{display:block;width:100%;max-width:560px;margin:8px auto 0;background:linear-gradient(180deg,#3fc274,#1f9d50);color:#ffffff;font-family:var(--sans);font-size:17.5px;font-weight:700;letter-spacing:.01em;text-align:center;text-decoration:none;padding:19px 22px;border:none;border-radius:10px;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 10px 30px rgba(33,160,84,.34)}
+.cta:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(33,160,84,.46);background:linear-gradient(180deg,#46cd7d,#22a657)}
 .cta .sub{display:block;font-size:12.5px;font-weight:500;opacity:.78;margin-top:3px;text-transform:none;letter-spacing:0}
 
 .guarantee{max-width:560px;margin:16px auto 0;text-align:center;font-size:13.5px;line-height:1.65;color:var(--muted)}
